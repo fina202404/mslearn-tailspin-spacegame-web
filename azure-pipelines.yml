@@ -1,12 +1,6 @@
-trigger:
-  - "*"
-
-pool: name:KAPS
-
-variables:
-  buildConfiguration: "Release"
-
+pool: KAPS
 steps:
+  - bash: echo hello world
   - task: UseDotNet@2
     displayName: "Use .NET SDK 6.x"
     inputs:
