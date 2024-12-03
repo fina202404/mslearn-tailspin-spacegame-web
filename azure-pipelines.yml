@@ -1,18 +1,11 @@
-trigger:
-- '*'
-
-pool:
-  name: git-agent
-
-variables:
-  buildConfiguration: 'Release'
-
+pool: KAPS
 steps:
-- task: UseDotNet@2
-  displayName: 'Use .NET SDK 6.x'
-  inputs:
-    packageType: sdk
-    version: '6.x'
+  - bash: echo hello world
+  - task: UseDotNet@2
+    displayName: "Use .NET SDK 6.x"
+    inputs:
+      packageType: sdk
+      version: "6.x"
 
 - task: Npm@1
   displayName: 'Run npm install'
