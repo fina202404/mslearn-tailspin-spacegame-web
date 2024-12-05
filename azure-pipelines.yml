@@ -1,4 +1,4 @@
-pool: KAPS
+pool: default
 steps:
   - bash: echo hello world
   - task: UseDotNet@2
